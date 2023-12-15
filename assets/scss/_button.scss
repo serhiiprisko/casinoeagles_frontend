@@ -1,0 +1,44 @@
+.orange-btn {
+  text-transform: uppercase;
+  background-image: linear-gradient(to right,#fbb033 0,#fd0 100%);
+  border-color: #fbb033;
+}
+.green-btn {
+  text-transform: uppercase;
+  background-image: linear-gradient(to right,#199e27 0,#22c333 100%);
+  border-color: #37a60f;
+}
+
+.red-btn {
+  text-transform: uppercase;
+  //background-image: linear-gradient(to right, #d53362 0, #fd96b4 100%);
+  background: red;
+  border: none;
+  border-radius: .2rem;
+}
+.red-btn:active,
+.red-btn:hover,
+.red-btn:focus {
+  opacity: 0.5;
+  background: red;
+}
+
+.register-btn {
+  text-transform: uppercase;
+  //background-image: linear-gradient(to right, #c59d3e 0, #ebd597 100%);
+  background: #333a42;
+  border: none;
+  border-radius: .2rem;
+}
+
+.btn-link {
+  color: var(--info);
+  font-weight: 200;
+}
+.btn {
+  white-space: nowrap;
+}
+
+.btn-link:hover {
+  color: white;
+}

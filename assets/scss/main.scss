@@ -1,0 +1,206 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-vue/src/index.scss";
+@import "~vue-select/src/scss/vue-select.scss";
+@import "variables";
+@import "functions";
+@import "dropdown";
+@import "vue-flux";
+@import "nav-item";
+@import "container";
+@import "input-group";
+@import "input";
+@import "select";
+@import "button";
+@import "modal";
+@import "table";
+@import "typography";
+@import "sidebar";
+@import "list-group";
+@import "../flags.css";
+@import "../icon-material.css";
+
+[class*=" flag:"],
+[class^="flag:"] {
+  font-size: 0.8rem;
+}
+
+html {
+  overflow-y: auto;
+  overflow-x: auto;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  body {
+    background-color: #ebebeb;
+  }
+}
+//@media (min-width: 990px){
+//  ::-webkit-scrollbar-corner {
+//    background-color: #151617;
+//  }
+//  ::-webkit-scrollbar-track {
+//    background-color: black;
+//  }
+//  ::-webkit-scrollbar-thumb {
+//    border: 1px solid #272727;
+//    -webkit-border-radius: 10px;
+//    border-radius: 10px;
+//    background-color: #787878;
+//  }
+//  ::-webkit-scrollbar {
+//    width: 10px;
+//    height:10px;
+//    background-color: #212325;
+//  }
+//}
+
+.gameListPane {
+  @media (min-width: 768px) {
+    .container-fluid {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  @media (min-width: 992px) {
+    .container-fluid {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-fluid {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+  .activeGroup:after {
+    margin-top: 0.75rem;
+    display: block;
+    content: "";
+    width: 70px;
+    height: 4px;
+    background-color: #ffc900;
+  }
+  .game-actions {
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    width: calc(100% - 30px);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.62);
+    opacity: 0;
+    z-index: -1;
+  }
+  .activeOp {
+    opacity: 1;
+    z-index: 1;
+  }
+  .activeDs {
+    display: flex;
+  }
+}
+
+.game-container {
+  @media (min-width: 1720px) {
+    max-width: 1480px;
+  }
+  .gameFrame {
+    width: 100%;
+    border: 1px solid #202121;
+    height: calc(100vh - 200px);
+  }
+}
+
+.mainHeader {
+  &.desktop {
+  }
+  &.mobile {
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+  }
+  border-color: #ebebeb !important;
+}
+.main-container {
+  &.desktop {
+    //height: calc(100% - 80px);
+  }
+  &.mobile {
+    padding-top: $header-mobile-size;
+  }
+}
+.gameHeader {
+  &.desktop {
+  }
+  &.mobile {
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+  }
+  .expand-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.footer-container {
+  background-color: $tab-container-color;
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+.management-container {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.tab-container {
+  background-color: $tab-container-color;
+  .form-control {
+    border-radius: 10rem;
+    background-color: var(--primary);
+    border-color: var(--gray);
+    color: var(--info);
+  }
+  .sign-select > .vs__dropdown-toggle {
+    border-radius: 10rem;
+  }
+}
+
+.main-body {
+  &.desktop {
+    min-width: 1215px;
+  }
+  &.mobile {
+  }
+}
+.main-body:hover {
+  left: 500px;
+}
+
+.faq-text {
+  cursor: pointer;
+  color: white;
+  &:hover {
+    color: var(--info);
+  }
+}
+
+.promotion-container {
+  background-color: $tab-container-color;
+  .promotion-card {
+    background-color: #1b1b19;
+  }
+}
